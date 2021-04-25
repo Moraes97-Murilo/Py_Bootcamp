@@ -9,6 +9,3 @@ Ideas:
 3 - dog quiz
 
 '''
-a = [5,6,9,4,2,8]
-a.sort()
-print(a)
