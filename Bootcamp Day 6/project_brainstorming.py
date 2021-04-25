@@ -4,8 +4,8 @@
 '''
 Ideas:
 
-1 -
-2 -
-3 -
+1 - lottery
+2 - trip calculator
+3 - dog quiz
 
 '''
