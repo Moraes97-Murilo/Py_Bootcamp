@@ -1,6 +1,5 @@
 #caesar cipher
 from default_alphabet import STR_UP_LIST
-from os import system
 
 def caesar(mode,text):
         shift = int(input("How many characters you want to shift? "))
@@ -19,6 +18,7 @@ def caesar(mode,text):
         again = input("\nDo you want to translate another message?(yes/no) ").upper()
 
         if again == "YES":
+            #clear terminal
             print(chr(27)+"[2J")
             return True
         else:
