@@ -1,0 +1,7 @@
+I started the repository saving the name of the folders with 
+the respective days, without adding the digit ZERO.
+
+When I arrived on the tenth day I had the thankless surprise 
+that made me change the name of all the folders from the previous days... 
+
+So, now the order is right.
