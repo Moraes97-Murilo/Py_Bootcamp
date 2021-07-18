@@ -1,7 +1,6 @@
 #Now this bootcamp is getting interesting
 #18/07/2021
 import random
-from typing import DefaultDict
 
 def card_dealer():
     '''Returns a random card from the deck.'''
