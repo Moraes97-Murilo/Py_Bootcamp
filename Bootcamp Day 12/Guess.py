@@ -11,12 +11,12 @@ def check_guess(randnum,gnum):
     elif gnum > randnum:
         print("Stop being a silly, you must be CRAZY to win this game... and...")
         time.sleep(1.8)
-        print('The number is higher than your guess! You silly!')
+        print('The number is lower than your guess! You silly!')
         return False
     else:
         print("Stop being a fool, you must be CRAZY to win this game... and...")
         time.sleep(1.8)
-        print('The number is lower than your guess! You fool!')
+        print('The number is higher than your guess! You fool!')
         return False
 print('\nWelcome to my Crazy Guessing Game!\n\n')
 game = True
