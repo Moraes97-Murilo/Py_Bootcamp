@@ -1,1 +1,3 @@
 #coffee
+def rasources():
+    print()
