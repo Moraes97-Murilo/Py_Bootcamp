@@ -11,19 +11,28 @@ def see_resources():
         rep = True
         while rep:
             repo = input("Select a resource to refuel (water, milk, coffee, money, nothing): ").lower()
-            delta = (limit[repo])-resources[repo]
+            try:
+                delta = (limit[repo])-resources[repo]
+            except:
+                pass
             if repo in list(resources.keys()) and delta > 0:
                 refuel = float(input(f"The machine needs {delta} of {repo}.. Type the amount to refuel: "))
-                resources[repo] += refuel
-            elif delta <= 0:
-                print("Be careful, the machine will overflow! ")
+                if refuel > delta:
+                    print("Be careful, the machine will overflow! ")
+                else: 
+                    resources[repo] += refuel
             elif repo == "nothing":
                 print(resources)
                 print("We recommend that you leave all resources at maximum. Restarting! ")
+                time.sleep(8)
+                print(chr(27) + "[2J")
                 rep = False
             else:
+                print(chr(27) + "[2J")
                 print("Something's wrong, restarting! ")
+                rep = False
     except:
+        print(chr(27) + "[2J")
         print("Something's wrong, restarting! ")
 def operational(ing,drink):
     for i in ing:
