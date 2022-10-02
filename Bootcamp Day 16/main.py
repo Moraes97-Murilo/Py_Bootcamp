@@ -1,4 +1,4 @@
-from menu import Menu, MenuItem
+from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
@@ -15,10 +15,14 @@ while working:
     elif user_choice == "report":
         money_machine.report()
         coffee_maker.report()
+        refuel = input(f'Do you want to refuel the machine? (Y/n).. ').lower()
+        if refuel == "y":
+            coffee_maker.refuel()
     else:
         coffee = menu.find_drink(user_choice)
         if coffee == None:
             continue
         elif coffee_maker.is_resource_sufficient(coffee):
+            print(f'Your coffee will costs ${coffee.cost}')
             if money_machine.make_payment(coffee.cost):
                 coffee_maker.make_coffee(coffee)

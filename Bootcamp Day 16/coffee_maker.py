@@ -2,9 +2,9 @@ class CoffeeMaker:
     """Models the machine that makes the coffee"""
     def __init__(self):
         self.resources = {
-            "water": 300,
-            "milk": 200,
-            "coffee": 100,
+            "water": 3000,
+            "milk": 2000,
+            "coffee": 500,
         }
 
     def report(self):
@@ -12,6 +12,13 @@ class CoffeeMaker:
         print(f"Water: {self.resources['water']}ml")
         print(f"Milk: {self.resources['milk']}ml")
         print(f"Coffee: {self.resources['coffee']}g")
+    
+    def refuel(self):
+        """Refuel all the resources."""
+        self.resources["water"] = 3000
+        self.resources["milk"] = 2000
+        self.resources["coffee"] = 500
+        print('Refueling...')
 
     def is_resource_sufficient(self, drink):
         """Returns True when order can be made, False if ingredients are insufficient."""
