@@ -6,9 +6,9 @@ app = Flask(__name__)
 def user_home():
     return "Hi, this page works to greet new users."
 
-@app.route("/username/<name>")
-def greet_user(name):
-    return f"Hello, {name}, nice to meet you!"
+@app.route("/username/<name>/<int:age>")
+def greet_user(name,age):
+    return f"Hello, {name}, nice to meet you! You are {age} year old."
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
