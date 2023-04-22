@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 #Home message
 default = "Hi, this page works to greet new users."
-style = ['b','u','en','h1']
+css = ['b','u','en','h1']
 
 @make
-def styling(x,y):
+def style(x,y):
     pass
 
 @app.route("/username")
@@ -23,5 +23,5 @@ def greet_user(name,age):
              
 
 if __name__ == "__main__":
-    default = styling(style,default)
+    default = style(css,default)
     app.run(debug=True)
